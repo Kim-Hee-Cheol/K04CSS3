@@ -1,0 +1,10 @@
+.content{
+    margin:0 auto;
+    widows: 80%;
+    color:yellow
+}
+.conent p{
+    width:100%;
+    font-size: 1.5em;
+    border:1px solid red;
+}

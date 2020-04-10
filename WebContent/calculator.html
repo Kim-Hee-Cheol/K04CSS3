@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator.html</title>
+    <style>
+        td{
+            width : 25%; 
+        }
+        .cal{
+            background-color:lightgray; width:400px; height:450px;
+            border-radius: 10px 10px 10px 10px;
+            
+        }
+        #show td{
+            text-align:right; background-color:#70C738; 
+            font-weight:bold; font-size: 40px;
+            border-radius: 10px 10px 10px 10px;
+            padding-right:10px; color:#373737;
+            
+        }
+        #input1{
+            width : 50%; background-color: gray; color:white;
+            text-align:center; font-weight:bold; font-size: 20px;
+            border-radius: 10px;
+            
+        }
+       
+        #input2 td{
+            background-color: #373737; color:white;  font-weight: bold;
+            border-radius: 10px 10px 10px 10px; text-align: center;
+            font-size: 20px;
+    
+        }
+        #input2 #multi1{
+            background-color: #FA960A; 
+        }
+        #input3 td{
+            background-color : #373737; color:white; font-weight:bold;
+            border-radius: 10px 10px 10px 10px; text-align:center;
+            font-size: 20px;
+        }
+        #input3 #multi2{
+            background-color: #FA960A;
+        }
+        #input4 td{
+            background-color : #373737; color:white; font-weight:bold;
+            border-radius: 10px 10px 10px 10px; text-align:center;
+            font-size: 20px;
+        }
+        #input4 #multi3{
+            background-color: #FA960A;
+        }
+        #input5 td{
+            background-color : #373737; color:white; font-weight:bold;
+            border-radius: 10px 10px 10px 10px; text-align:center;
+            font-size: 20px;
+        }
+        #input5 #multi4{
+            background-color: #FA960A;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>계산기</h2>
+    <table class="cal">
+        <tr id="show">
+            <td colspan="4">123+654</td>
+        </tr>
+
+        <tr>
+            <td id="input1" colspan="2">BackSpace</td>
+            <td id="input1" colspan="2">C</td>
+        </tr>
+
+        <tr id="input2">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td id="multi1">/</td>
+        </tr>
+        <tr id="input3">
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td id="multi2">*</td>
+        </tr>
+        <tr id="input4">
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td id="multi3">+</td>
+        </tr>
+        <tr id="input5">
+            <td>=</td>
+            <td>0</td>
+            <td>.</td>
+            <td id="multi4">-</td>
+        </tr>
+</body>
+</html>
