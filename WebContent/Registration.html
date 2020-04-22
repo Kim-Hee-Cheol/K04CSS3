@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration.html</title>
+    <style>
+    body{
+        margin-left: 30px;
+    }
+    table{
+        width:750px;
+    }
+    .rec{
+        background-color: #E6E6E6;
+    }
+    h2 span{
+        color: red; 
+    }
+    #ch{
+        background-color: #E6E6E6;
+    }
+    #fir{
+       height:25px; width:130px;
+    }
+    #sec{
+      width:100px; height: 30px; color:white; background-color: turquoise;
+    }
+    #third{
+        font-size:7pt; border:none; width:235px; color:red;
+    }
+    #fourth{
+        font-size:7pt; width:300px; border:none; color:gray;
+    }
+    #fifth{
+        height:25px; width:130px;
+    }
+    #sixth{
+       font-size: 7pt;
+    }
+    #seventh{
+        height :25px; width:70px;
+    }
+    </style>
+</head>
+<body>
+    <form>
+        <h2>회원정보 <span>(필수)</span></h2>  
+        <table class="ess">
+            <tr>
+                <td style="width: 220px;">아이디</td>
+                <td>
+                    <input type="text" name="user_id" value="4자리 이상" id="fir"/>
+                    <input type="text" name="check" value="아이디중복확인" id="sec"/>
+                    <input type="text" value="아이디 형식에 맞춰주세요(영문,숫자,조합4문자이상)"
+                    id="third">
+                </td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td>
+                    <input type="text" name="user_pwd" value="fdfdf" id="fir">
+                    <input type="text" value="8~20자리의 영문,숫자 조합(영문,숫자,특수 기호 조합을 권장합니다.)"
+                    id="fourth">
+                </td>
+            </tr>
+            <tr>
+                <td>비밀번호확인</td>
+                <td>
+                    <input type="text" name="user_pwd_check" value="dfdfdfd" id="fir"/>
+                </td>
+            </tr>
+            <tr>
+                <td>이름</td>
+                <td>
+                    <input type="text" name="name" id="fifth"/>
+                </td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td>
+                    <input type="radio" name="gender" value="M"
+                    checked="checked" />남성
+                    &nbsp;&nbsp;
+                    <input type="radio" name="gender" value="W" />여성
+                </td>
+            </tr>
+            <tr>
+                <td>생년월일</td>
+                <td>
+                    <input type="date" name="birth" value="2022-02-12" id="fir"/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="cal"
+                    checked="checked" />양력
+                    &nbsp;&nbsp;
+                    <input type="radio" name="cal" />음력
+                </td>
+            </tr>
+            <tr>
+                <td>이메일</td>
+                <td id="sixth">
+                    <input type="text" name="email" id="fir"> @
+                    <input type="text" name="eamil_dns" id="fir">
+                    <select name="emailaddr">
+                        <option value="nate.com">nate.com</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="daum.net">daum.net</option>
+                        <option value="yahoo.com">yahoo.com</option>
+                        <option value="google.com">google.com</option>
+                    </select>
+                    <br/>
+                    이메일 수신동의 시, 신상품/할인혜택/이벤트 등의 정보를 받아보실 수 있습니다.
+                    <br/>
+                    수신동의 거부 시에도 기본서비스(주문배송 메일)는 발송됩니다.
+                    <input type="checkbox" name="yes" checked="checked" />예
+                    <input type="checkbox" name="no" />아니오
+                </td>
+            </tr>
+            <tr>
+                <td >휴대전화</td>
+                <td id="sixth">
+                    <input type="text" name="cel1" maxlength="4" id="seventh"/>-
+                    <input type="text" name="cel2" maxlength="4" id="seventh"/>-
+                    <input type="text" name="cel3" maxlength="4" id="seventh"/>
+                    <br/>
+                    할인혜택과 이벤트 등의 소식 안내를 SMS로 받으실 수 있습니다.
+                    <br/>
+                    수신동의 거부 시에도 기본서비스는 발송됩니다.
+                    <input type="checkbox" name="yes" checked="checked"/>예
+                    <input type="checkbox" name="no"/>아니오
+                </td>
+            </tr>
+        </table>
+
+        <table class="rec">
+            <h2 id="ch">부가정보 <span>(선택)</span></h2>
+            <tr>
+                <td style="width: 220px;">일반전화</td>
+                <td>
+                    <input type="text" name="cel1" maxlength="4" id="seventh"/>-
+                    <input type="text" name="cel2" maxlength="4" id="seventh"/>-
+                    <input type="text" name="cel3" maxlength="4" id="seventh"/>
+                </td>
+            </tr>
+            <tr>
+                <td>주소</td>
+                <td>
+                    <input type="text" name="add1" id="fir"> &nbsp;
+                    <input type="text" name="search" value="우편번호검색" disabled="disabled" id="sec">
+                    <br/>
+                    <input type="text" name="add2" id="fir"> &nbsp;
+                    <input type="text" name="add3" value="상세주소" id="fir">
+            </tr>
+            <tr>
+                <td>직업</td>
+                <td>
+                    <select name="job">
+                        <option value="::선택::">::선택::</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>관심 브랜드</td>
+                <td>
+                    <input type="checkbox">한빛미디어 &nbsp;&nbsp;
+                    <input type="checkbox">한빛아카데미 &nbsp;&nbsp;
+                    <input type="checkbox">한빛비즈
+                    <br/>
+                    <input type="checkbox">한빛라이프 &nbsp;&nbsp;
+                    <input type="checkbox">리얼타임 eBook &nbsp;&nbsp;
+                    <input type="checkbox">MAKE
+                    <br/>
+                    <input type="checkbox">한빛에듀
+                </td>
+            </tr>
+            <tr>
+                <td>관심 분야</td>
+                <td>
+                    <input type="checkbox">프로그램이 언어 &nbsp;&nbsp;
+                    <input type="checkbox">웹 &nbsp;&nbsp;
+                    <input type="checkbox">모바일/게임
+                    <br/>
+                    <input type="checkbox">데이터베이스 &nbsp;&nbsp;
+                    <input type="checkbox">네트워크/보안 &nbsp;&nbsp;
+                    <input type="checkbox">IT자격증/수험서 
+                    <br/>
+                    <input type="checkbox">OA/오피스 &nbsp;&nbsp;
+                    <input type="checkbox">디자인 &nbsp;&nbsp;
+                    <input type="checkbox">사진/예술
+                    <br/>
+                    <input type="checkbox">경제/경영 &nbsp;&nbsp;
+                    <input type="checkbox">자기계발 &nbsp;&nbsp;
+                    <input type="checkbox">인문/사회/과학
+                    <br/>
+                    <input type="checkbox">기타:
+                </td>
+            </tr>
+        </table>
+        <br/>
+        
+        
+    </form>
+</body>
+</html>

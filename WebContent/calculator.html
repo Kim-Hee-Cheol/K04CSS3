@@ -9,15 +9,17 @@
             width : 25%; 
         }
         .cal{
-            background-color:lightgray; width:400px; height:450px;
+            background-color:lightgray; width:500px; height:500px;
             border-radius: 10px 10px 10px 10px;
+            border-spacing: 7px;
             
         }
-        #show td{
+        #display{
             text-align:right; background-color:#70C738; 
             font-weight:bold; font-size: 40px;
             border-radius: 10px 10px 10px 10px;
             padding-right:10px; color:#373737;
+            height: 70px;
             
         }
         #input1{
@@ -65,39 +67,58 @@
 </head>
 <body>
     <h2>계산기</h2>
+    <form name="calculator">
     <table class="cal">
-        <tr id="show">
-            <td colspan="4">123+654</td>
+        <tr>
+            <td colspan="4"><input type="text" id="display" name="result" value="0"></td>
         </tr>
 
         <tr>
-            <td id="input1" colspan="2">BackSpace</td>
-            <td id="input1" colspan="2">C</td>
+            <td id="input1" colspan="2" onclick="bs()">BackSpace</td>
+            <td id="input1" colspan="2" onclick="reset()">C</td>
         </tr>
 
         <tr id="input2">
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td id="multi1">/</td>
+            <td onclick="add(1)">1</td>
+            <td onclick="add(2)">2</td>
+            <td onclick="add(3)">3</td>
+            <td id="multi1" onclick="add('/')">/</td>
         </tr>
         <tr id="input3">
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td id="multi2">*</td>
+            <td onclick="add(4)">4</td>
+            <td onclick="add(5)">5</td>
+            <td onclick="add(6)">6</td>
+            <td id="multi2" onclick="add('*')">*</td>
         </tr>
         <tr id="input4">
-            <td>7</td>
-            <td>8</td>
-            <td>9</td>
-            <td id="multi3">+</td>
+            <td onclick="add(7)">7</td>
+            <td onclick="add(8)">8</td>
+            <td onclick="add(9)">9</td>
+            <td id="multi3" onclick="add('+')">+</td>
         </tr>
         <tr id="input5">
-            <td>=</td>
-            <td>0</td>
-            <td>.</td>
-            <td id="multi4">-</td>
+            <td onclick="calculator()">=</td>
+            <td onclick="add(0)">0</td>
+            <td onclick="add('.')">.</td>
+            <td id="multi4" onclick="add('-')">-</td>
         </tr>
+    </table>
+    </form>
+
+        <script>
+            var flag = false; //0이 있는 상태
+
+            function reset(){ //c를 눌렀을 때
+                if(flag==true){
+                    flag==false;
+                calculator.result.value ="0";
+                }
+            }
+
+            function add(){
+                
+            }
+        
+        </script>
 </body>
 </html>
