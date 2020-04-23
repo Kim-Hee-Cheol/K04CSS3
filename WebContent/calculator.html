@@ -11,7 +11,7 @@
         .cal{
             background-color:lightgray; width:500px; height:500px;
             border-radius: 10px 10px 10px 10px;
-            border-spacing: 7px;
+            border-spacing: 7px; 
             
         }
         #display{
@@ -25,14 +25,14 @@
         #input1{
             width : 50%; background-color: gray; color:white;
             text-align:center; font-weight:bold; font-size: 20px;
-            border-radius: 10px;
+            border-radius: 10px; cursor: pointer;
             
         }
        
         #input2 td{
             background-color: #373737; color:white;  font-weight: bold;
             border-radius: 10px 10px 10px 10px; text-align: center;
-            font-size: 20px;
+            font-size: 20px; cursor: pointer;
     
         }
         #input2 #multi1{
@@ -41,7 +41,7 @@
         #input3 td{
             background-color : #373737; color:white; font-weight:bold;
             border-radius: 10px 10px 10px 10px; text-align:center;
-            font-size: 20px;
+            font-size: 20px; cursor: pointer;
         }
         #input3 #multi2{
             background-color: #FA960A;
@@ -49,7 +49,7 @@
         #input4 td{
             background-color : #373737; color:white; font-weight:bold;
             border-radius: 10px 10px 10px 10px; text-align:center;
-            font-size: 20px;
+            font-size: 20px; cursor: pointer;
         }
         #input4 #multi3{
             background-color: #FA960A;
@@ -57,7 +57,7 @@
         #input5 td{
             background-color : #373737; color:white; font-weight:bold;
             border-radius: 10px 10px 10px 10px; text-align:center;
-            font-size: 20px;
+            font-size: 20px; cursor: pointer;
         }
         #input5 #multi4{
             background-color: #FA960A;
@@ -70,7 +70,7 @@
     <form name="calculator">
     <table class="cal">
         <tr>
-            <td colspan="4"><input type="text" id="display" name="result" value="0"></td>
+            <td colspan="4"><input type="text" id="display" name="display" value="0"></td>
         </tr>
 
         <tr>
@@ -97,7 +97,7 @@
             <td id="multi3" onclick="add('+')">+</td>
         </tr>
         <tr id="input5">
-            <td onclick="calculator()">=</td>
+            <td onclick="calculate()">=</td>
             <td onclick="add(0)">0</td>
             <td onclick="add('.')">.</td>
             <td id="multi4" onclick="add('-')">-</td>
@@ -105,19 +105,31 @@
     </table>
     </form>
 
-        <script>
-            var flag = false; //0이 있는 상태
+    <script>
+        
+        var result = "";
+        
+        function add(char) {
+            var display = document.getElementById('display');
+            display.value = display.value + char;
+        }
 
-            function reset(){ //c를 눌렀을 때
-                if(flag==true){
-                    flag==false;
-                calculator.result.value ="0";
-                }
-            }
-
-            function add(){
-                
-            }
+        function calculate() {
+            var display = document.getElementById('display');
+            document.calculator.display.value=eval(document.calculator.display.value);
+            display.value = result.toFixed(2);
+        }
+        function reset() {
+            document.getElementById('display').value = "0";
+        }
+        function bs() {
+            length = document.getElementById('display').value.length;
+            document.getElementById('display').value = document.getElementById('display').value.substring(0,length-1);
+            result = document.getElementById('display').value.toString();
+            document.getElementById('display').value = result;
+            
+        }
+        
         
         </script>
 </body>
